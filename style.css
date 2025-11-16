@@ -1,0 +1,233 @@
+/* ===== Basic Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #F1F3E0;
+  color: #030a20;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #778873;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #64ffda;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccd6f6;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #64ffda;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background: linear-gradient(135deg, #A1BC98);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-text span {
+  color: #64ffda;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: #cbcab5;
+  color: #98b3dc;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #52d3bb;
+}
+
+/* ===== Projects Section ===== */
+.projects {
+  padding: 80px 60px;
+  background: #778873;
+}
+
+.projects h2 {
+  text-align: center;
+  color: #64ffda;
+  margin-bottom: 40px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.project {
+  background: #bdb0be;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+}
+
+/* ===== Skills Section ===== */
+.skills {
+  padding: 80px 60px;
+  background: #A1BC98;
+}
+
+.skills h2 {
+  text-align: center;
+  color: #64ffda;
+  margin-bottom: 30px;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.skills li {
+  background: #A1BC98;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* ===== Contact Section ===== */
+.contact {
+  padding: 80px 60px;
+  background: #6F826A;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #443627;
+  color: #7B542F;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+#formMessage {
+  color: #E67E22;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #3E3F29;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #8892b0;
+}
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #64ffda;
+  margin-right: 40px;
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+/* make hero layout side by side */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* allows image + text to stack on small screens */
+  gap: 30px;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    margin-right: 0;
+  }
+} 
+

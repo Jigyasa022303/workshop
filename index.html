@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head> 
+        <meta charset="UTF-8"/>
+        <meta name ="viewpoint"  content ="width=device-width,initial-scale=1.0"/>
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet"  href="style.css" />
+
+    </head>
+    <body>
+        
+        <header>
+            <div class=" logo">Jigyasa  Shrestha </div>
+            <nav>  
+                <ul>
+                <li> <a href ="#about"> About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id="about" class="hero">
+            <img src ="imageee.jpg"  width="100"/>
+            <div class ="hero-text">
+                <h1> Hello, My name is Jigyasa Shrestha.</h1>
+                <p> I'am currently pursuing my degree in Information Technology at Biratnagar International College. I'm passionate Web Developer who loves creating and responsive websites using Html,CSS and JavaScript.</p>
+                <a  href ="#projects" class="btn"> View Mt Work</a>
+
+                
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal website built using HTML, CSS, and JS.</p>
+      </div>
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>Weather forecasting web app using open API.</p>
+      </div>
+      <div class="project">
+        <h3>To-Do App</h3>
+        <p>Manage daily tasks easily with this responsive to-do app.</p>
+      </div>
+    </div>
+  </section>
+
+        <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5 & CSS</li>
+      <li>Python</li>
+      <li>Responsive Web Design</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formMessage"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name | All Rights Reserved</p>
+  </footer>
+  <script src="script.js"></script>
+
+    </body>
+</html>
