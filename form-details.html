@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Details</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+            background: #f3f3f3;
+        }
+        .box {
+            background: white;
+            padding: 25px;
+            width: 350px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p span {
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Submitted Contact Form Details</h2>
+
+    <div class="box">
+        <p><span>Name:</span> <span id="showName"></span></p>
+        <p><span>Email:</span> <span id="showEmail"></span></p>
+        <p><span>Message:</span> <span id="showMessage"></span></p>
+    </div>
+
+    <script>
+        document.getElementById("showName").textContent = localStorage.getItem("contactName");
+        document.getElementById("showEmail").textContent = localStorage.getItem("contactEmail");
+        document.getElementById("showMessage").textContent = localStorage.getItem("contactMessage");
+    </script>
+
+</body>
+</html>

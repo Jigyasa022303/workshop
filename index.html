@@ -1,81 +1,148 @@
 <!DOCTYPE html>
-<html  lang="en">
-    <head> 
-        <meta charset="UTF-8"/>
-        <meta name ="viewpoint"  content ="width=device-width,initial-scale=1.0"/>
-        <title>Personal Portfolio</title>
-        <link rel="stylesheet"  href="style.css" />
+<html lang="en">
 
-    </head>
-    <body>
-        
-        <header>
-            <div class=" logo">Jigyasa  Shrestha </div>
-            <nav>  
-                <ul>
-                <li> <a href ="#about"> About</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Jigyasa Shrestha</div>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#media">Media</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            </ul>
+        </nav>
 
-        </header>
+        <!-- Dark / Light Toggle Button -->
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </header>
 
-        <section id="about" class="hero">
-            <img src ="imageee.jpg"  width="100"/>
-            <div class ="hero-text">
-                <h1> Hello, My name is Jigyasa Shrestha.</h1>
-                <p> I'am currently pursuing my degree in Information Technology at Biratnagar International College. I'm passionate Web Developer who loves creating and responsive websites using Html,CSS and JavaScript.</p>
-                <a  href ="#projects" class="btn"> View Mt Work</a>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="hero">
+        <img src="image.jpg" width="140" class="profile-pic">
+        <div class="hero-text">
+            <h1>Hello, My name is Jigyasa Shrestha.</h1>
+            <p>I am currently pursuing my degree in Information Technology at Biratnagar International College. I'm a passionate Web Developer who loves creating responsive websites using HTML, CSS, and JavaScript.</p>
+        </div>
+    </section>
 
-                
-            </div>
-        </section>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
 
-        <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project">
+        <div class="project-grid">
+
+    <div class="project-card" data-link=" https://jigyasa022303.github.io/workshop/">
         <h3>Portfolio Website</h3>
         <p>A personal website built using HTML, CSS, and JS.</p>
-      </div>
-      <div class="project">
-        <h3>Weather App</h3>
-        <p>Weather forecasting web app using open API.</p>
-      </div>
-      <div class="project">
-        <h3>To-Do App</h3>
-        <p>Manage daily tasks easily with this responsive to-do app.</p>
-      </div>
     </div>
-  </section>
 
-        <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML5 & CSS</li>
-      <li>Python</li>
-      <li>Responsive Web Design</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
+    <div class="project-card" data-link="https://jigyasa022303.github.io/weatherapp/">
+        <h3>Weather App</h3>
+        <p>Weather forecasting web app using an open API.</p>
+    </div>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-      <p id="formMessage"></p>
-    </form>
-  </section>
+   
 
-  <footer>
-    <p>© <span id="year"></span> Your Name | All Rights Reserved</p>
-  </footer>
-  <script src="script.js"></script>
+</div>
 
-    </body>
+<!-- IMAGE SLIDER SECTION -->
+<section id="slider" class="slider-section">
+    <h2>Image Slider</h2>
+
+    <div class="slider-container">
+
+        <button class="slide-btn" id="prevBtn">❮</button>
+
+        <div class="slider">
+            <img src="slide1.jpg" class="slide active">
+            <img src="slide2.jpg" class="slide">
+            <img src="slide3.jpg" class="slide">
+        </div>
+
+        <button class="slide-btn" id="nextBtn">❯</button>
+    </div>
+</section>
+
+
+
+    <!-- MEDIA SECTION -->
+    <section id="media" class="media">
+        <h2>Media Showcase</h2>
+
+        <div class="media-container">
+
+            <!-- VIDEO -->
+            <div class="media-item">
+                <h3>My Video</h3>
+                <video width="250" controls>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- AUDIO -->
+            <div class="media-item">
+                <h3>My Audio</h3>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mp3">
+                </audio>
+            </div>
+
+            <!-- CANVAS -->
+            <div class="media-item">
+                <h3>Canvas Drawing</h3>
+                <canvas id="myCanvas" width="300" height="200" style="border:1px solid #333;"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5 & CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Responsive Web Design</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Submit</button>
+            <p id="formMessage"></p>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© <span id="year"></span> Jigyasa Shrestha | All Rights Reserved</p>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
